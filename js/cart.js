@@ -72,13 +72,13 @@ new Vue({
                 item.check = !item.check;
             }
         },
-        checkAll(flag) {
-            this.checkAllFlag = flag;
+        checkAll() {
+            this.checkAllFlag = !this.checkAllFlag;
             this.productList.forEach((item) => {
                 if (item.check == undefined) {
-                    this.$set(item, 'check', flag);
+                    this.$set(item, 'check', true);
                 } else {
-                    item.check = flag;
+                    item.check =!item.check;
                 }
             })
         }
